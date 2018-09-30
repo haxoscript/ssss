@@ -42,13 +42,13 @@ def lodprint(s):
         time.sleep(7.0/90)
 
 semut=(gt+"""
- #####  ####### #     # #     # ####### 
-#     # #       ##   ## #     #    #    
-#       #       # # # # #     #    #    
- #####  #####   #  #  # #     #    #    
-      # #       #     # #     #    #    
-#     # #       #     # #     #    #    
- #####  ####### #     #  #####     #    
+ +++++++     +++++++  +++++++  +++++++
+ +      +   +       + +      + +       +
+ +       +  +       + +      + 
+ +       +  +       + +     +
+ +       +  +       + +   +
+ +      +   +       + +     +
+ +++++++     +++++++  +       +
  =================================
 """)
 l="Harap tunggu.."
@@ -57,11 +57,11 @@ def main_menu():
     clear()
     slowprints(semut)
     print(p+
-        "   Tembak Xl Mode Otp" +
+        "   Tembak Paket XL Mode OTP" +
         "\nPilih Salah Satu:"
         "\n  [1] Menu Beli Paket" + 
-        "\n  [2] Minta Otp Code" +
-        "\n  [3] Menu utama"
+        "\n  [2] Minta OTP Code" +
+        "\n  [3] Menu Utama"
     )
     choice = str(input(" ex:1👉 "))
     exec_menu(choice)
@@ -83,11 +83,11 @@ def menu_1():
     lodprint(l)
     clear()
     print(semut)
-    print(p+"Menu Beli Paket Xl")
+    print(p+"Menu Beli Paket XL")
     msisdn = str(input("Masukan No 62xx 👉 "))
     clear()
     print(semut)
-    po = str(input(p+"Masukan Kode Otp 👉 "))
+    po = str(input(p+"Masukan Kode OTP 👉 "))
     clear()
     print(semut)
     print (p+" 1. Xtra Kuota 30GB 12.000")
@@ -96,10 +96,11 @@ def menu_1():
     print (p+" 4. Xtra 9GB 30day 52.900 ")
     print (p+" 5. Xtra 17GB 30day 82.900 ")
     print (p+" 6. Xtra 25GB 30day 102.900 ")
-    print (p+" 7. Kuota 700mb 10.000")
-    print (p+" 8. Xtra 10GB 30day 59.000")
-    print (p+" 9. Xtra Kuota 20gb 89.0000")
-    print (p+"10. Manual service id")
+    print (p+" 7. Xtra 10GB 30day 59.000")
+    print (p+" 8. Xtra 20gb 30day 89.0000")
+    print (p+" 9. Xtra 40gb 30day 89.0000")
+    print (p+"10. Xtra 70gb 30day 89.0000")
+    print (p+"11. Manual service id")
     pkt = str(input("Pilih Sesuai Keinginan Agan Boss >> "))
     
     if pkt == '1':
@@ -115,22 +116,24 @@ def menu_1():
     elif pkt == '6':
         i = '8211014'
     elif pkt == '7':
-        i = '8211170'
-    elif pkt == '8':
         i ='8211183'
-    elif pkt == '9':
+    elif pkt == '8':
         i ='8211285'
+    elif pkt == '9':
+        i ='8211287'
     elif pkt == '10':
+        i ='8211289'
+    elif pkt == '11':
         i = str(input("Service ID Paket👉"))
     else:
-        print("Pilihan gak tercantum")
+        print("Pilihan Tidak Tercantum")
     lodprint(l)
     serviceid = i
     xl = XL(msisdn)
     r = xl.loginWithOTP(po)
     if(r != False):
         print(xl.purchasePackage(serviceid)['message'])
-        decision = str(input(p+"Ulangi Proses [Y/N]? 👉 "))
+        decision = str(input(p+"Ulangi Proses Ini [Y/N]? 👉 "))
         menu_actions['main']() if(decision in ['N','n']) else menu_actions['1']()
         
 def menu_2():
@@ -142,7 +145,7 @@ def menu_2():
     lodprint(l)
     xl = XL(msisdn)
     print(xl.reqOTP()['message'])
-    decision = str(input(p+"Ulangi Proses[Y/N]? 👉 "))
+    decision = str(input(p+"Ulangi Proses Ini [Y/N]? 👉 "))
     menu_actions['main']() if(decision in ['N','n']) else menu_2()
 
 def menu_4():
