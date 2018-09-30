@@ -90,19 +90,20 @@ def menu_1():
     po = str(input(p+"Masukan Kode Otp 👉 "))
     clear()
     print(semut)
-    print (p+" 1.Xtra Kuota 30GB Rp. 10.000")
-    print (p+" 2.Xtra 3GB 30day 22.900 ")
-    print (p+" 3.Xtra 5GB 30day 32.900 ")
-    print (p+" 4.Xtra 9GB 30day 52.900 ")
-    print (p+" 5.Xtra 17GB 30day 82.900 ")
-    print (p+" 6.Xtra 25GB 30day 102.900 ")
-    print (p+" 7.Kuota 700mb 10k")
-    print (p+" 8.xtra 10GB 30day 59k")
-    print (p+" 9.Manual service id")
-    pkt = str(input("Pilih Sesuai Keinginan >> "))
+    print (p+" 1. Xtra Kuota 30GB 12.000")
+    print (p+" 2. Xtra 3GB 30day 22.900 ")
+    print (p+" 3. Xtra 5GB 30day 32.900 ")
+    print (p+" 4. Xtra 9GB 30day 52.900 ")
+    print (p+" 5. Xtra 17GB 30day 82.900 ")
+    print (p+" 6. Xtra 25GB 30day 102.900 ")
+    print (p+" 7. Kuota 700mb 10.000")
+    print (p+" 8. Xtra 10GB 30day 59.000")
+    print (p+" 9. Xtra Kuota 20gb 89.0000")
+    print (p+"10. Manual service id")
+    pkt = str(input("Pilih Sesuai Keinginan Agan Boss >> "))
     
     if pkt == '1':
-        i = '8110577'
+        i = '8110671'
     elif pkt == '2':
         i = '8211010'
     elif pkt == '3':
@@ -118,6 +119,8 @@ def menu_1():
     elif pkt == '8':
         i ='8211183'
     elif pkt == '9':
+        i ='8211285'
+    elif pkt == '10':
         i = str(input("Service ID Paket👉"))
     else:
         print("Pilihan gak tercantum")
